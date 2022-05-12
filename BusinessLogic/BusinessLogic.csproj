@@ -43,8 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicException.cs" />
+    <Compile Include="Credentials.cs" />
+    <Compile Include="CredentialsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Producer.cs" />
+    <Compile Include="ProducerRepo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

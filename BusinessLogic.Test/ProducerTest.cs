@@ -11,7 +11,6 @@ namespace BusinessLogic.Test
         private const string John = "Johnnnnnn";
         private const string Doe = "Doe";
         private const string johndoe25 = "johndoeeee";
-
         private const string tooShortPassword = "Matias1";
         private const string TooLongName = "ExtremelyLongLongLongNameAndAlsoExtremelyLongLongLongLastName";
 

@@ -10,7 +10,7 @@ namespace BusinessLogic
         private string firstName;
         private string lastName;
         public const int minimumPasswordLength = 5;
-        public const int MailMinLength = 4;
+        public const int MailMinLength = 6;
         public const int MailMaxLength = 30;
         public const int FirstNameMinLength = 2;
         public const int FirstNameMaxLength = 30;
@@ -23,7 +23,7 @@ namespace BusinessLogic
             set
             {
                 if (value?.Length < MailMinLength || value?.Length > MailMaxLength)
-                    throw new BusinessLogicException($"User name length must be between {MailMinLength} and {MailMaxLength} characters");
+                    throw new BusinessLogicException($"Producer mail length must be between {MailMinLength} and {MailMaxLength} characters");
                 else 
                     mail = value;
             }
