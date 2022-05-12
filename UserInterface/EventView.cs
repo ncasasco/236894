@@ -25,5 +25,10 @@ namespace UserInterface
         {
 
         }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

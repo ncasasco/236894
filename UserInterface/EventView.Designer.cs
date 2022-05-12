@@ -29,36 +29,35 @@ namespace UserInterface
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.fecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lstEvt = new System.Windows.Forms.ListView();
+            this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnBuy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listView1
+            // lstEvt
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.nombre,
-            this.fecha});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 40);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(494, 279);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lstEvt.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.name,
+            this.date});
+            this.lstEvt.HideSelection = false;
+            this.lstEvt.Location = new System.Drawing.Point(3, 40);
+            this.lstEvt.Name = "lstEvt";
+            this.lstEvt.Size = new System.Drawing.Size(494, 279);
+            this.lstEvt.TabIndex = 0;
+            this.lstEvt.UseCompatibleStateImageBehavior = false;
+            this.lstEvt.View = System.Windows.Forms.View.Details;
             // 
-            // nombre
+            // name
             // 
-            this.nombre.Text = "Evento";
-            this.nombre.Width = 255;
+            this.name.Text = "Event";
+            this.name.Width = 255;
             // 
-            // fecha
+            // date
             // 
-            this.fecha.Text = "Fecha";
-            this.fecha.Width = 78;
+            this.date.Text = "Date";
+            this.date.Width = 78;
             // 
             // label1
             // 
@@ -70,34 +69,23 @@ namespace UserInterface
             this.label1.TabIndex = 3;
             this.label1.Text = "Events";
             // 
-            // button1
+            // btnBuy
             // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(363, 355);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 53);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Create Event";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button4
-            // 
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(199, 355);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 53);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Buy Ticket";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnBuy.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnBuy.Location = new System.Drawing.Point(199, 355);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(97, 53);
+            this.btnBuy.TabIndex = 13;
+            this.btnBuy.Text = "Buy Ticket";
+            this.btnBuy.UseVisualStyleBackColor = true;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // EventView
             // 
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBuy);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lstEvt);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "EventView";
             this.Size = new System.Drawing.Size(500, 450);
@@ -108,11 +96,10 @@ namespace UserInterface
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader nombre;
+        private System.Windows.Forms.ListView lstEvt;
+        private System.Windows.Forms.ColumnHeader name;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ColumnHeader fecha;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ColumnHeader date;
+        private System.Windows.Forms.Button btnBuy;
     }
 }

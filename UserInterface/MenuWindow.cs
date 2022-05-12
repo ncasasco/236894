@@ -13,15 +13,13 @@ namespace UserInterface
 {
     public partial class MenuWindow : Form
     {
+        
         public MenuWindow()
         {
             InitializeComponent();
             eventsView1.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
+            if(ProducersWindow.credentialsHandler == null)
+                    btnEvent.Hide();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -34,6 +32,16 @@ namespace UserInterface
                 this.Hide();
                 ProducersWindow newWindow = new ProducersWindow();
                 newWindow.Show();
+        }
+
+        private void eventsView1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -247,7 +247,6 @@ namespace UserInterface
             this.label12.TabIndex = 5;
             this.label12.Text = "Welcome";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // panelRegister
             // 
@@ -273,8 +272,8 @@ namespace UserInterface
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(419, 373);
-            this.Controls.Add(this.panelRegister);
             this.Controls.Add(this.panelLogin);
+            this.Controls.Add(this.panelRegister);
             this.Location = new System.Drawing.Point(19, 206);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProducersWindow";

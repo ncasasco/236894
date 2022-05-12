@@ -33,12 +33,14 @@ namespace UserInterface
             this.btnLogin = new System.Windows.Forms.Button();
             this.bnSalir = new System.Windows.Forms.Button();
             this.eventsView1 = new UserInterface.EventView();
+            this.btnEvent = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel1.Controls.Add(this.btnEvent);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.bnSalir);
             this.panel1.Location = new System.Drawing.Point(16, 15);
@@ -80,6 +82,19 @@ namespace UserInterface
             this.eventsView1.Name = "eventsView1";
             this.eventsView1.Size = new System.Drawing.Size(500, 450);
             this.eventsView1.TabIndex = 3;
+            this.eventsView1.Load += new System.EventHandler(this.eventsView1_Load);
+            // 
+            // btnEvent
+            // 
+            this.btnEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEvent.Location = new System.Drawing.Point(1, 119);
+            this.btnEvent.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEvent.Name = "btnEvent";
+            this.btnEvent.Size = new System.Drawing.Size(227, 55);
+            this.btnEvent.TabIndex = 5;
+            this.btnEvent.Text = "Create Event";
+            this.btnEvent.UseVisualStyleBackColor = true;
+            this.btnEvent.Click += new System.EventHandler(this.button1_Click);
             // 
             // MenuWindow
             // 
@@ -104,5 +119,6 @@ namespace UserInterface
         private EventView eventsView1;
         private System.Windows.Forms.Button bnSalir;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnEvent;
     }
 }

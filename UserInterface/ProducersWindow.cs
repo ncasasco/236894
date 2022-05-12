@@ -13,21 +13,30 @@ namespace UserInterface
 {
     public partial class ProducersWindow : Form
     {
+        public static ProducerRepo producerList;
+        public static Credentials credentialsAux;
+        public static CredentialsManager credentialsHandler;
+
         public ProducersWindow()
         {
             InitializeComponent();
+            panelLogin.Show();
+            if (producerList == null)
+                producerList = new ProducerRepo();
+            if(credentialsAux == null)
+                credentialsAux = new Credentials();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Producer newProducer = new Producer();
-
             try
             {
                 newProducer.Mail = textBoxMail.Text;
                 newProducer.Password = textBoxPassword.Text;
                 newProducer.FirstName = textBoxName.Text;
                 newProducer.LastName = textBoxLastName.Text;
+                credentialsHandler = new CredentialsManager(producerList, newProducer);
                 MessageBox.Show("Producer created", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 panelLogin.Show();
@@ -68,15 +77,15 @@ namespace UserInterface
             panelLogin.Show();
         }
 
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
             {
+                credentialsAux.Password = textBoxPasswordLogin.Text;
+                credentialsAux.Mail = textBoxProducerLogin.Text;
+
+                credentialsHandler.Login(credentialsAux);
+
                 this.Hide();
                 MenuWindow newWindow = new MenuWindow();
                 newWindow.Show();

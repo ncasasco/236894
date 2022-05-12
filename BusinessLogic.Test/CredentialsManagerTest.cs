@@ -25,7 +25,7 @@ namespace BusinessLogic.Test
             };
             simpleProducer = new Producer()
             {
-                Mail = "userrrrr",
+                Mail = "producerrrrr",
                 Password = "somepassword",
                 FirstName = "Ryannnnn",
                 LastName = "Jamesssss",

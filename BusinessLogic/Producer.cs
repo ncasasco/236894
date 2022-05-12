@@ -23,7 +23,7 @@ namespace BusinessLogic
             set
             {
                 if (value?.Length < MailMinLength || value?.Length > MailMaxLength)
-                    throw new BusinessLogicException($"Producer mail length must be between {MailMinLength} and {MailMaxLength} characters");
+                    throw new BusinessLogicException($"Mail length must be between {MailMinLength} and {MailMaxLength} characters");
                 else 
                     mail = value;
             }
