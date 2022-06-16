@@ -11,7 +11,6 @@ namespace BusinessLogic
 {
     public class ProducerRepo
     {
-
         IList<Producer> Producers;
 
         public ProducerRepo()

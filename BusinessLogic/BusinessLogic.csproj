@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventRepo.cs" />
     <Compile Include="Ticket.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="Credentials.cs" />

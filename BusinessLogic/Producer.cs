@@ -20,7 +20,7 @@ namespace BusinessLogic
         public const int FirstNameMinLength = 2;
         public const int FirstNameMaxLength = 30;
         public const int LastNameMinLength = 2;
-        public const int LastNameMaxLength = 60;
+        public const int LastNameMaxLength = 30;
 
         [Key]
         public string Mail

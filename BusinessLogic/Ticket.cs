@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
-    class Ticket
+    public class Ticket
     {
         private string name;
         private int price;
