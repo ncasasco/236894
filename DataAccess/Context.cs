@@ -9,5 +9,6 @@ namespace DataAccess
     public class Context : DbContext
     {
         public DbSet<Producer> Producers { get; set; }
+        public DbSet<Event> Events { get; set; }
     }
 }

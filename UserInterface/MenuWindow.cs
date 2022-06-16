@@ -17,7 +17,7 @@ namespace UserInterface
         public MenuWindow()
         {
             InitializeComponent();
-            eventsView1.Show();
+            eventsView1.Hide();
             eventCreateView1.Hide();
             if(ProducersWindow.credentialsHandler == null)
                     btnCreateEvt.Hide();

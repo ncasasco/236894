@@ -13,10 +13,11 @@ namespace UserInterface
 {
     public partial class EventCreateView : UserControl
     {
-        Event evt = new Event();
+        private EventRepo eventList;
         public EventCreateView()
         {
             InitializeComponent();
+            eventList = new EventRepo();
         }
 
         private void btnURL_Click(object sender, EventArgs e)
@@ -33,8 +34,39 @@ namespace UserInterface
             try
             {
                 
-                evt.schedule.Add(new Tuple<DateTime, DateTime>(dateTimePicker1.Value, dateTimePicker2.Value));
                 MessageBox.Show("Schedule added", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (ArgumentNullException exc2)
+            {
+                MessageBox.Show(exc2.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (BusinessLogicException exc2)
+            {
+                MessageBox.Show(exc2.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Event evt = new Event();
+
+            try
+            {
+                evt.Name = txtName.Text;
+                evt.Description = txtDescription.Text;
+                evt.Adress = txtAdress.Text;
+                evt.isOnline = checkAdress.Checked;
+                evt.PicturePath = txtURL.Text;
+                evt.category = cmbCategory.Text;
+                evt.schedule.Add(new Tuple<DateTime, DateTime>(dateTimePicker1.Value, dateTimePicker2.Value));
+                Ticket tick = new Ticket();
+                tick.name = txtTicketName.Text;
+                tick.price = int.Parse(txtPrice.Text);
+                tick.quantity = int.Parse(txtQuantity.Text);
+                evt.tickets.Add(tick);
+                eventList.Add(evt);
+                MessageBox.Show("Évent Created", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (ArgumentNullException exc2)

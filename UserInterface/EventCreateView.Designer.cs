@@ -56,6 +56,8 @@ namespace UserInterface
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnType = new System.Windows.Forms.Button();
             this.btnSchedule = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -155,9 +157,9 @@ namespace UserInterface
             this.label7.Location = new System.Drawing.Point(18, 191);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 17);
+            this.label7.Size = new System.Drawing.Size(92, 17);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Profile picture";
+            this.label7.Text = "Event Picture";
             // 
             // txtURL
             // 
@@ -174,7 +176,7 @@ namespace UserInterface
             // 
             // txtTicketName
             // 
-            this.txtTicketName.Location = new System.Drawing.Point(95, 258);
+            this.txtTicketName.Location = new System.Drawing.Point(102, 288);
             this.txtTicketName.Margin = new System.Windows.Forms.Padding(4);
             this.txtTicketName.Name = "txtTicketName";
             this.txtTicketName.Size = new System.Drawing.Size(95, 22);
@@ -184,7 +186,7 @@ namespace UserInterface
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(17, 258);
+            this.label5.Location = new System.Drawing.Point(24, 288);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 17);
@@ -195,7 +197,7 @@ namespace UserInterface
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 225);
+            this.label6.Location = new System.Drawing.Point(22, 255);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 20);
             this.label6.TabIndex = 17;
@@ -203,7 +205,7 @@ namespace UserInterface
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(95, 288);
+            this.txtQuantity.Location = new System.Drawing.Point(102, 318);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(95, 22);
@@ -213,7 +215,7 @@ namespace UserInterface
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(17, 288);
+            this.label8.Location = new System.Drawing.Point(24, 318);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 17);
@@ -222,7 +224,7 @@ namespace UserInterface
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(95, 318);
+            this.txtPrice.Location = new System.Drawing.Point(102, 348);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(95, 22);
@@ -232,7 +234,7 @@ namespace UserInterface
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(17, 318);
+            this.label9.Location = new System.Drawing.Point(24, 348);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 17);
@@ -243,7 +245,7 @@ namespace UserInterface
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(243, 225);
+            this.label10.Location = new System.Drawing.Point(250, 255);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(86, 20);
             this.label10.TabIndex = 22;
@@ -253,7 +255,7 @@ namespace UserInterface
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(244, 258);
+            this.label11.Location = new System.Drawing.Point(251, 288);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(38, 17);
@@ -264,7 +266,7 @@ namespace UserInterface
             // 
             this.dateTimePicker1.CustomFormat = "dd/MM | HH:mm";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(289, 258);
+            this.dateTimePicker1.Location = new System.Drawing.Point(296, 288);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(130, 22);
             this.dateTimePicker1.TabIndex = 24;
@@ -273,7 +275,7 @@ namespace UserInterface
             // 
             this.dateTimePicker2.CustomFormat = "dd/MM | HH:mm";
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(289, 288);
+            this.dateTimePicker2.Location = new System.Drawing.Point(296, 318);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(130, 22);
             this.dateTimePicker2.TabIndex = 25;
@@ -282,7 +284,7 @@ namespace UserInterface
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(244, 291);
+            this.label12.Location = new System.Drawing.Point(251, 321);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 17);
@@ -293,19 +295,20 @@ namespace UserInterface
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLogin.Location = new System.Drawing.Point(171, 402);
+            this.btnLogin.Location = new System.Drawing.Point(173, 413);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(135, 32);
             this.btnLogin.TabIndex = 27;
             this.btnLogin.Text = "Create Event";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnType
             // 
             this.btnType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnType.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnType.Location = new System.Drawing.Point(50, 358);
+            this.btnType.Location = new System.Drawing.Point(65, 378);
             this.btnType.Margin = new System.Windows.Forms.Padding(4);
             this.btnType.Name = "btnType";
             this.btnType.Size = new System.Drawing.Size(101, 27);
@@ -317,7 +320,7 @@ namespace UserInterface
             // 
             this.btnSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnSchedule.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSchedule.Location = new System.Drawing.Point(274, 358);
+            this.btnSchedule.Location = new System.Drawing.Point(289, 378);
             this.btnSchedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnSchedule.Name = "btnSchedule";
             this.btnSchedule.Size = new System.Drawing.Size(114, 27);
@@ -326,11 +329,40 @@ namespace UserInterface
             this.btnSchedule.UseVisualStyleBackColor = true;
             this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.Location = new System.Drawing.Point(18, 223);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 17);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Category";
+            // 
+            // cmbCategory
+            // 
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Items.AddRange(new object[] {
+            "Conferencias",
+            "Cursos",
+            "Deportes",
+            "Fútbol",
+            "Música",
+            "Teatro",
+            "Otros"});
+            this.cmbCategory.Location = new System.Drawing.Point(133, 220);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(121, 24);
+            this.cmbCategory.TabIndex = 31;
+            // 
             // EventCreateView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Controls.Add(this.cmbCategory);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.btnSchedule);
             this.Controls.Add(this.btnType);
             this.Controls.Add(this.btnLogin);
@@ -394,5 +426,7 @@ namespace UserInterface
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnType;
         private System.Windows.Forms.Button btnSchedule;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbCategory;
     }
 }

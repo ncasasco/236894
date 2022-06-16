@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
-    class EventRepo
+    public class EventRepo
     {
         IList<Event> Events;
 
