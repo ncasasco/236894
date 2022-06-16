@@ -1,5 +1,6 @@
 ﻿//using BusinessLogic.Exceptions;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace BusinessLogic
@@ -10,8 +11,11 @@ namespace BusinessLogic
         private string mail;
         private string firstName;
         private string lastName;
+        private IList<Producer> tickets;
+        private bool isAdmin;
+
         public const int minimumPasswordLength = 5;
-        public const int MailMinLength = 6;
+        public const int MailMinLength = 5;
         public const int MailMaxLength = 30;
         public const int FirstNameMinLength = 2;
         public const int FirstNameMaxLength = 30;

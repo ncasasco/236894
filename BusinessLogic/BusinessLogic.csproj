@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ticket.cs" />
+    <Compile Include="Event.cs" />
     <Compile Include="Credentials.cs" />
     <Compile Include="CredentialsManager.cs" />
     <Compile Include="Exceptions\BusinessLogicException.cs" />

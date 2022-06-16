@@ -39,7 +39,6 @@ namespace UserInterface
                 newProducer.FirstName = textBoxName.Text;
                 newProducer.LastName = textBoxLastName.Text;
                 credentialsHandler = new CredentialsManager(producerList, newProducer);
-                MessageBox.Show("Producer created", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 using (Context db = new Context())
                 {
@@ -55,6 +54,7 @@ namespace UserInterface
                     db.SaveChanges();
                 }
 
+                MessageBox.Show("Producer created", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 panelLogin.Show();
                 panelRegister.Hide();
                 ClearTextBoxes();

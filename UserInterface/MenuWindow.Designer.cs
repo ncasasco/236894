@@ -34,12 +34,15 @@ namespace UserInterface
             this.btnLogin = new System.Windows.Forms.Button();
             this.bnSalir = new System.Windows.Forms.Button();
             this.eventsView1 = new UserInterface.EventView();
+            this.eventCreateView1 = new UserInterface.EventCreateView();
+            this.btnCreateEvt = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel1.Controls.Add(this.btnCreateEvt);
             this.panel1.Controls.Add(this.btnEvent);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.bnSalir);
@@ -57,7 +60,7 @@ namespace UserInterface
             this.btnEvent.Name = "btnEvent";
             this.btnEvent.Size = new System.Drawing.Size(227, 55);
             this.btnEvent.TabIndex = 5;
-            this.btnEvent.Text = "Create Event";
+            this.btnEvent.Text = "Event";
             this.btnEvent.UseVisualStyleBackColor = true;
             this.btnEvent.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -69,7 +72,7 @@ namespace UserInterface
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(227, 55);
             this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "User";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.button1_Click_2);
             // 
@@ -89,12 +92,31 @@ namespace UserInterface
             // 
             this.eventsView1.BackColor = System.Drawing.SystemColors.Desktop;
             this.eventsView1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.eventsView1.Location = new System.Drawing.Point(252, 15);
+            this.eventsView1.Location = new System.Drawing.Point(250, 15);
             this.eventsView1.Margin = new System.Windows.Forms.Padding(5);
             this.eventsView1.Name = "eventsView1";
             this.eventsView1.Size = new System.Drawing.Size(500, 450);
             this.eventsView1.TabIndex = 3;
             this.eventsView1.Load += new System.EventHandler(this.eventsView1_Load);
+            // 
+            // eventCreateView1
+            // 
+            this.eventCreateView1.Location = new System.Drawing.Point(250, 15);
+            this.eventCreateView1.Name = "eventCreateView1";
+            this.eventCreateView1.Size = new System.Drawing.Size(500, 450);
+            this.eventCreateView1.TabIndex = 4;
+            // 
+            // btnCreateEvt
+            // 
+            this.btnCreateEvt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateEvt.Location = new System.Drawing.Point(1, 196);
+            this.btnCreateEvt.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCreateEvt.Name = "btnCreateEvt";
+            this.btnCreateEvt.Size = new System.Drawing.Size(227, 55);
+            this.btnCreateEvt.TabIndex = 6;
+            this.btnCreateEvt.Text = "Create Event";
+            this.btnCreateEvt.UseVisualStyleBackColor = true;
+            this.btnCreateEvt.Click += new System.EventHandler(this.btnCreateEvt_Click);
             // 
             // MenuWindow
             // 
@@ -102,6 +124,7 @@ namespace UserInterface
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(768, 476);
+            this.Controls.Add(this.eventCreateView1);
             this.Controls.Add(this.eventsView1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -120,5 +143,7 @@ namespace UserInterface
         private System.Windows.Forms.Button bnSalir;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnEvent;
+        private EventCreateView eventCreateView1;
+        private System.Windows.Forms.Button btnCreateEvt;
     }
 }

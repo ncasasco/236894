@@ -18,8 +18,9 @@ namespace UserInterface
         {
             InitializeComponent();
             eventsView1.Show();
+            eventCreateView1.Hide();
             if(ProducersWindow.credentialsHandler == null)
-                    btnEvent.Hide();
+                    btnCreateEvt.Hide();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -41,7 +42,19 @@ namespace UserInterface
 
         private void button1_Click(object sender, EventArgs e)
         {
+            eventsView1.Show();
+            eventCreateView1.Hide();
+        }
 
+        private void eventCreatorView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCreateEvt_Click(object sender, EventArgs e)
+        {
+            eventsView1.Hide();
+            eventCreateView1.Show();
         }
     }
 }

@@ -93,6 +93,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EventCreateView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EventCreateView.Designer.cs">
+      <DependentUpon>EventCreateView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EventCreateView.resx">
+      <DependentUpon>EventCreateView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuWindow.resx">
       <DependentUpon>MenuWindow.cs</DependentUpon>
     </EmbeddedResource>
