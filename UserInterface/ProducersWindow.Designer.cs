@@ -40,6 +40,7 @@ namespace UserInterface
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.btnBck = new System.Windows.Forms.Button();
             this.btnLoginRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.textBoxPasswordLogin = new System.Windows.Forms.TextBox();
@@ -154,6 +155,7 @@ namespace UserInterface
             // 
             // panelLogin
             // 
+            this.panelLogin.Controls.Add(this.btnBck);
             this.panelLogin.Controls.Add(this.btnLoginRegister);
             this.panelLogin.Controls.Add(this.btnLogin);
             this.panelLogin.Controls.Add(this.textBoxPasswordLogin);
@@ -167,6 +169,16 @@ namespace UserInterface
             this.panelLogin.Size = new System.Drawing.Size(423, 375);
             this.panelLogin.TabIndex = 22;
             this.panelLogin.Visible = false;
+            // 
+            // btnBck
+            // 
+            this.btnBck.Location = new System.Drawing.Point(8, 12);
+            this.btnBck.Name = "btnBck";
+            this.btnBck.Size = new System.Drawing.Size(40, 40);
+            this.btnBck.TabIndex = 10;
+            this.btnBck.Text = "<";
+            this.btnBck.UseVisualStyleBackColor = true;
+            this.btnBck.Click += new System.EventHandler(this.btnBck_Click);
             // 
             // btnLoginRegister
             // 
@@ -308,5 +320,6 @@ namespace UserInterface
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panelRegister;
+        private System.Windows.Forms.Button btnBck;
     }
 }

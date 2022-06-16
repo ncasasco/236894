@@ -102,5 +102,12 @@ namespace UserInterface
             panelLogin.Hide();
             panelRegister.Show();
         }
+
+        private void btnBck_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MenuWindow newWindow = new MenuWindow();
+            newWindow.Show();
+        }
     }
 }

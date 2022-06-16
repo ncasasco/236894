@@ -30,10 +30,10 @@ namespace UserInterface
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEvent = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.bnSalir = new System.Windows.Forms.Button();
             this.eventsView1 = new UserInterface.EventView();
-            this.btnEvent = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +48,18 @@ namespace UserInterface
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(228, 447);
             this.panel1.TabIndex = 0;
+            // 
+            // btnEvent
+            // 
+            this.btnEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEvent.Location = new System.Drawing.Point(1, 119);
+            this.btnEvent.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEvent.Name = "btnEvent";
+            this.btnEvent.Size = new System.Drawing.Size(227, 55);
+            this.btnEvent.TabIndex = 5;
+            this.btnEvent.Text = "Create Event";
+            this.btnEvent.UseVisualStyleBackColor = true;
+            this.btnEvent.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnLogin
             // 
@@ -84,18 +96,6 @@ namespace UserInterface
             this.eventsView1.TabIndex = 3;
             this.eventsView1.Load += new System.EventHandler(this.eventsView1_Load);
             // 
-            // btnEvent
-            // 
-            this.btnEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEvent.Location = new System.Drawing.Point(1, 119);
-            this.btnEvent.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEvent.Name = "btnEvent";
-            this.btnEvent.Size = new System.Drawing.Size(227, 55);
-            this.btnEvent.TabIndex = 5;
-            this.btnEvent.Text = "Create Event";
-            this.btnEvent.UseVisualStyleBackColor = true;
-            this.btnEvent.Click += new System.EventHandler(this.button1_Click);
-            // 
             // MenuWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -107,7 +107,7 @@ namespace UserInterface
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main Menu | Social Network";
+            this.Text = "Main Menu | Event App";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
