@@ -142,6 +142,10 @@
       <Project>{530d5a22-0295-412f-a3df-58a8068c70c6}</Project>
       <Name>BusinessLogic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{ccc82734-d4f7-404f-8ec1-d4cac71532b1}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

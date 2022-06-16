@@ -1,5 +1,6 @@
 ﻿//using BusinessLogic.Exceptions;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace BusinessLogic
 {
@@ -17,6 +18,7 @@ namespace BusinessLogic
         public const int LastNameMinLength = 2;
         public const int LastNameMaxLength = 60;
 
+        [Key]
         public string Mail
         {
             get => mail;

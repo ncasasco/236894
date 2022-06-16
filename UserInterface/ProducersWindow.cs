@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogic;
+using DataAccess;
 
 namespace UserInterface
 {
@@ -30,6 +31,7 @@ namespace UserInterface
         private void button1_Click(object sender, EventArgs e)
         {
             Producer newProducer = new Producer();
+
             try
             {
                 newProducer.Mail = textBoxMail.Text;
@@ -38,6 +40,20 @@ namespace UserInterface
                 newProducer.LastName = textBoxLastName.Text;
                 credentialsHandler = new CredentialsManager(producerList, newProducer);
                 MessageBox.Show("Producer created", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                using (Context db = new Context())
+                {
+                    var producer = new Producer
+                    {
+                        Mail = newProducer.Mail,
+                        Password = newProducer.Password,
+                        FirstName = newProducer.FirstName,
+                        LastName = newProducer.LastName,
+                    };
+
+                    db.Producers.Add(producer);
+                    db.SaveChanges();
+                }
 
                 panelLogin.Show();
                 panelRegister.Hide();
@@ -51,6 +67,26 @@ namespace UserInterface
             catch(ArgumentNullException exc2)
             {
                 MessageBox.Show(exc2.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                credentialsAux.Password = textBoxPasswordLogin.Text;
+                credentialsAux.Mail = textBoxProducerLogin.Text;
+
+                credentialsHandler.Login(credentialsAux);
+
+                this.Hide();
+                MenuWindow newWindow = new MenuWindow();
+                newWindow.Show();
+            }
+            catch (BusinessLogicException exc)
+            {
+                ClearTextBoxes();
+                MessageBox.Show(exc.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -75,26 +111,6 @@ namespace UserInterface
             ClearTextBoxes();
             panelRegister.Hide();
             panelLogin.Show();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                credentialsAux.Password = textBoxPasswordLogin.Text;
-                credentialsAux.Mail = textBoxProducerLogin.Text;
-
-                credentialsHandler.Login(credentialsAux);
-
-                this.Hide();
-                MenuWindow newWindow = new MenuWindow();
-                newWindow.Show();
-            }
-            catch(BusinessLogicException exc)
-            {
-                ClearTextBoxes();
-                MessageBox.Show(exc.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
 
         private void btnRegistrarse_Click(object sender, EventArgs e)

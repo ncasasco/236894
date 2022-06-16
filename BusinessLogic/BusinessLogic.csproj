@@ -52,7 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context.cs" />
     <Compile Include="Credentials.cs" />
     <Compile Include="CredentialsManager.cs" />
     <Compile Include="Exceptions\BusinessLogicException.cs" />
