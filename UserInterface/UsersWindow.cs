@@ -22,7 +22,35 @@ namespace UserInterface
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            User newUser = new User();
+
+            try
+            {
+                newUser.Username = textBoxUsername.Text;
+                newUser.Password = textBoxPassword.Text;
+                newUser.RegistrationDate = DateTime.Now;
+                if (textBoxPassword.Text == textBoxConfirm.Text)
+                {
+                    MessageBox.Show("User created", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    panelLogin.Show();
+                    panelRegister.Hide();
+                    ClearTextBoxes();
+                    label7.Hide();
+                }
+                else
+                {
+                    label7.Show();
+                }
+            }
+            catch (BusinessLogicException exc1)
+            {
+                MessageBox.Show(exc1.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (ArgumentNullException exc2)
+            {
+                MessageBox.Show(exc2.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void ClearTextBoxes()
