@@ -30,6 +30,10 @@ namespace BusinessLogic
             get => password;
             set
             {
+                if (value?.Length < PasswordMinLength || value?.Length > PasswordMaxLength)
+                    throw new BusinessLogicException($"Password length must be between {PasswordMinLength} and {PasswordMaxLength} characters");
+                else
+                    password = value;
             }
         }
 
@@ -50,6 +54,7 @@ namespace BusinessLogic
             {
                 password = this.Password,
                 username = this.Username,
+                registrationDate = this.RegistrationDate,
             };
         }
     }

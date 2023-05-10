@@ -35,6 +35,8 @@ namespace UserInterface
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnLoginRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.textBoxPasswordLogin = new System.Windows.Forms.TextBox();
@@ -43,6 +45,7 @@ namespace UserInterface
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panelRegister = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
@@ -95,6 +98,7 @@ namespace UserInterface
             this.textBoxPassword.PasswordChar = '·';
             this.textBoxPassword.Size = new System.Drawing.Size(264, 23);
             this.textBoxPassword.TabIndex = 3;
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
             // textBoxUsername
             // 
@@ -103,10 +107,13 @@ namespace UserInterface
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(264, 22);
             this.textBoxUsername.TabIndex = 2;
+            this.textBoxUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUsername_KeyPress);
             // 
             // panelLogin
             // 
             this.panelLogin.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panelLogin.Controls.Add(this.label10);
+            this.panelLogin.Controls.Add(this.label9);
             this.panelLogin.Controls.Add(this.btnLoginRegister);
             this.panelLogin.Controls.Add(this.btnLogin);
             this.panelLogin.Controls.Add(this.textBoxPasswordLogin);
@@ -120,6 +127,30 @@ namespace UserInterface
             this.panelLogin.Size = new System.Drawing.Size(423, 375);
             this.panelLogin.TabIndex = 22;
             this.panelLogin.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(168, 241);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(178, 17);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Password cannot be empty";
+            this.label10.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(168, 192);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(211, 17);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Mail/Username cannot be empty";
+            this.label9.Visible = false;
             // 
             // btnLoginRegister
             // 
@@ -204,6 +235,7 @@ namespace UserInterface
             // panelRegister
             // 
             this.panelRegister.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panelRegister.Controls.Add(this.label1);
             this.panelRegister.Controls.Add(this.label6);
             this.panelRegister.Controls.Add(this.linkLabel1);
             this.panelRegister.Controls.Add(this.label5);
@@ -220,6 +252,18 @@ namespace UserInterface
             this.panelRegister.Name = "panelRegister";
             this.panelRegister.Size = new System.Drawing.Size(419, 372);
             this.panelRegister.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(87, 202);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(323, 17);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Must contain at least a capital letter and a number";
+            this.label1.Visible = false;
             // 
             // label6
             // 
@@ -333,5 +377,8 @@ namespace UserInterface
         private System.Windows.Forms.TextBox textBoxConfirm;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -31,7 +31,7 @@ namespace UserInterface
                 newUser.RegistrationDate = DateTime.Now;
                 if (textBoxPassword.Text == textBoxConfirm.Text)
                 {
-                    MessageBox.Show("User created", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("User created", "Welcome!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     panelLogin.Show();
                     panelRegister.Hide();
@@ -71,11 +71,24 @@ namespace UserInterface
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            label9.Hide();
+            label10.Hide();
             try
             {
-                this.Hide();
-                MenuWindow newWindow = new MenuWindow();
-                newWindow.Show();
+                if (textBoxUserLogin.Text == "")
+                {
+                    label9.Show();
+                }
+                else if (textBoxPasswordLogin.Text == "")
+                {
+                    label10.Show();
+                }
+                else
+                {
+                    this.Hide();
+                    MenuWindow newWindow = new MenuWindow();
+                    newWindow.Show();
+                }
             }
             catch (BusinessLogicException exc)
             {
@@ -95,6 +108,23 @@ namespace UserInterface
             ClearTextBoxes();
             panelRegister.Hide();
             panelLogin.Show();
+        }
+
+        private void textBoxUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+            label1.Hide();
+            if (!textBoxPassword.Text.Any(Char.IsDigit) || !textBoxPassword.Text.Any(Char.IsUpper))
+            {
+                label1.Show();
+            }
         }
     }
 }
