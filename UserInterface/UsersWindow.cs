@@ -36,6 +36,7 @@ namespace UserInterface
                     panelLogin.Show();
                     panelRegister.Hide();
                     ClearTextBoxes();
+                    label1.Hide();
                     label7.Hide();
                 }
                 else
