@@ -31,6 +31,11 @@ namespace UserInterface
         {
             this.btnDeleteMaterial = new System.Windows.Forms.Button();
             this.pnlMaterial = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBlueMaterial = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtGreenMaterial = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtRedMaterial = new System.Windows.Forms.TextBox();
             this.txtMaterialName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,11 +43,6 @@ namespace UserInterface
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lstMaterials = new System.Windows.Forms.ListView();
-            this.txtGreenMaterial = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtBlueMaterial = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.pnlMaterial.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,7 @@ namespace UserInterface
             this.btnDeleteMaterial.TabIndex = 12;
             this.btnDeleteMaterial.Text = "Delete Material";
             this.btnDeleteMaterial.UseVisualStyleBackColor = true;
+            this.btnDeleteMaterial.Click += new System.EventHandler(this.btnDeleteMaterial_Click);
             // 
             // pnlMaterial
             // 
@@ -72,6 +73,53 @@ namespace UserInterface
             this.pnlMaterial.Name = "pnlMaterial";
             this.pnlMaterial.Size = new System.Drawing.Size(231, 156);
             this.pnlMaterial.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(-4, 80);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(28, 24);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "R:";
+            // 
+            // txtBlueMaterial
+            // 
+            this.txtBlueMaterial.Location = new System.Drawing.Point(170, 82);
+            this.txtBlueMaterial.Name = "txtBlueMaterial";
+            this.txtBlueMaterial.Size = new System.Drawing.Size(36, 22);
+            this.txtBlueMaterial.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(144, 80);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 24);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "B:";
+            // 
+            // txtGreenMaterial
+            // 
+            this.txtGreenMaterial.Location = new System.Drawing.Point(96, 82);
+            this.txtGreenMaterial.Name = "txtGreenMaterial";
+            this.txtGreenMaterial.Size = new System.Drawing.Size(36, 22);
+            this.txtGreenMaterial.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(67, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 24);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "G:";
             // 
             // txtRedMaterial
             // 
@@ -107,6 +155,7 @@ namespace UserInterface
             this.btnCreateMaterial.TabIndex = 2;
             this.btnCreateMaterial.Text = "Create Material";
             this.btnCreateMaterial.UseVisualStyleBackColor = true;
+            this.btnCreateMaterial.Click += new System.EventHandler(this.btnCreateMaterial_Click);
             // 
             // label2
             // 
@@ -138,53 +187,6 @@ namespace UserInterface
             this.lstMaterials.Size = new System.Drawing.Size(430, 191);
             this.lstMaterials.TabIndex = 9;
             this.lstMaterials.UseCompatibleStateImageBehavior = false;
-            // 
-            // txtGreenMaterial
-            // 
-            this.txtGreenMaterial.Location = new System.Drawing.Point(96, 82);
-            this.txtGreenMaterial.Name = "txtGreenMaterial";
-            this.txtGreenMaterial.Size = new System.Drawing.Size(36, 22);
-            this.txtGreenMaterial.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(67, 80);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 24);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "G:";
-            // 
-            // txtBlueMaterial
-            // 
-            this.txtBlueMaterial.Location = new System.Drawing.Point(170, 82);
-            this.txtBlueMaterial.Name = "txtBlueMaterial";
-            this.txtBlueMaterial.Size = new System.Drawing.Size(36, 22);
-            this.txtBlueMaterial.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(144, 80);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 24);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "B:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(-4, 80);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 24);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "R:";
             // 
             // MaterialsView
             // 

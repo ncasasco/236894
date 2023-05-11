@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,21 @@ namespace UserInterface
 {
     public partial class MaterialsView : UserControl
     {
-        public MaterialsView()
+        private UserRepo userList;
+        private CredentialsManager credentials;
+        public MaterialsView(UserRepo newUserList, CredentialsManager newCredentials)
         {
             InitializeComponent();
+        }
+
+        private void btnDeleteMaterial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCreateMaterial_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

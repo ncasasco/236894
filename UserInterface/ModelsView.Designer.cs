@@ -32,18 +32,26 @@ namespace UserInterface
             System.Windows.Forms.ComboBox cmbModelMaterial;
             this.btnDeleteModel = new System.Windows.Forms.Button();
             this.pnlMaterial = new System.Windows.Forms.Panel();
+            this.checkBoxPreview = new System.Windows.Forms.CheckBox();
+            this.cmbModelFigure = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtModelName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnCreateModel = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCreateModel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lstMaterials = new System.Windows.Forms.ListView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbModelFigure = new System.Windows.Forms.ComboBox();
-            this.checkBoxPreview = new System.Windows.Forms.CheckBox();
+            this.lstModels = new System.Windows.Forms.ListView();
             cmbModelMaterial = new System.Windows.Forms.ComboBox();
             this.pnlMaterial.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // cmbModelMaterial
+            // 
+            cmbModelMaterial.FormattingEnabled = true;
+            cmbModelMaterial.Location = new System.Drawing.Point(4, 144);
+            cmbModelMaterial.Name = "cmbModelMaterial";
+            cmbModelMaterial.Size = new System.Drawing.Size(202, 24);
+            cmbModelMaterial.TabIndex = 14;
             // 
             // btnDeleteModel
             // 
@@ -69,6 +77,37 @@ namespace UserInterface
             this.pnlMaterial.Size = new System.Drawing.Size(278, 222);
             this.pnlMaterial.TabIndex = 15;
             // 
+            // checkBoxPreview
+            // 
+            this.checkBoxPreview.AutoSize = true;
+            this.checkBoxPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxPreview.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBoxPreview.Location = new System.Drawing.Point(10, 178);
+            this.checkBoxPreview.Name = "checkBoxPreview";
+            this.checkBoxPreview.Size = new System.Drawing.Size(226, 33);
+            this.checkBoxPreview.TabIndex = 15;
+            this.checkBoxPreview.Text = "Generate preview";
+            this.checkBoxPreview.UseVisualStyleBackColor = true;
+            // 
+            // cmbModelFigure
+            // 
+            this.cmbModelFigure.FormattingEnabled = true;
+            this.cmbModelFigure.Location = new System.Drawing.Point(0, 82);
+            this.cmbModelFigure.Name = "cmbModelFigure";
+            this.cmbModelFigure.Size = new System.Drawing.Size(206, 24);
+            this.cmbModelFigure.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(0, 116);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 24);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Material";
+            // 
             // txtModelName
             // 
             this.txtModelName.Location = new System.Drawing.Point(0, 27);
@@ -87,16 +126,6 @@ namespace UserInterface
             this.label3.TabIndex = 4;
             this.label3.Text = "Figure";
             // 
-            // btnCreateModel
-            // 
-            this.btnCreateModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateModel.Location = new System.Drawing.Point(321, 400);
-            this.btnCreateModel.Name = "btnCreateModel";
-            this.btnCreateModel.Size = new System.Drawing.Size(167, 30);
-            this.btnCreateModel.TabIndex = 2;
-            this.btnCreateModel.Text = "Create Model";
-            this.btnCreateModel.UseVisualStyleBackColor = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -107,6 +136,17 @@ namespace UserInterface
             this.label2.Size = new System.Drawing.Size(61, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Name";
+            // 
+            // btnCreateModel
+            // 
+            this.btnCreateModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateModel.Location = new System.Drawing.Point(321, 400);
+            this.btnCreateModel.Name = "btnCreateModel";
+            this.btnCreateModel.Size = new System.Drawing.Size(167, 30);
+            this.btnCreateModel.TabIndex = 2;
+            this.btnCreateModel.Text = "Create Model";
+            this.btnCreateModel.UseVisualStyleBackColor = true;
+            this.btnCreateModel.Click += new System.EventHandler(this.btnCreateModel_Click);
             // 
             // label1
             // 
@@ -119,53 +159,14 @@ namespace UserInterface
             this.label1.TabIndex = 14;
             this.label1.Text = "List of Models";
             // 
-            // lstMaterials
+            // lstModels
             // 
-            this.lstMaterials.HideSelection = false;
-            this.lstMaterials.Location = new System.Drawing.Point(37, 70);
-            this.lstMaterials.Name = "lstMaterials";
-            this.lstMaterials.Size = new System.Drawing.Size(430, 146);
-            this.lstMaterials.TabIndex = 13;
-            this.lstMaterials.UseCompatibleStateImageBehavior = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(0, 116);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 24);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Material";
-            // 
-            // cmbModelFigure
-            // 
-            this.cmbModelFigure.FormattingEnabled = true;
-            this.cmbModelFigure.Location = new System.Drawing.Point(0, 82);
-            this.cmbModelFigure.Name = "cmbModelFigure";
-            this.cmbModelFigure.Size = new System.Drawing.Size(206, 24);
-            this.cmbModelFigure.TabIndex = 13;
-            // 
-            // cmbModelMaterial
-            // 
-            cmbModelMaterial.FormattingEnabled = true;
-            cmbModelMaterial.Location = new System.Drawing.Point(4, 144);
-            cmbModelMaterial.Name = "cmbModelMaterial";
-            cmbModelMaterial.Size = new System.Drawing.Size(202, 24);
-            cmbModelMaterial.TabIndex = 14;
-            // 
-            // checkBoxPreview
-            // 
-            this.checkBoxPreview.AutoSize = true;
-            this.checkBoxPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxPreview.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBoxPreview.Location = new System.Drawing.Point(10, 178);
-            this.checkBoxPreview.Name = "checkBoxPreview";
-            this.checkBoxPreview.Size = new System.Drawing.Size(226, 33);
-            this.checkBoxPreview.TabIndex = 15;
-            this.checkBoxPreview.Text = "Generate preview";
-            this.checkBoxPreview.UseVisualStyleBackColor = true;
+            this.lstModels.HideSelection = false;
+            this.lstModels.Location = new System.Drawing.Point(37, 70);
+            this.lstModels.Name = "lstModels";
+            this.lstModels.Size = new System.Drawing.Size(430, 146);
+            this.lstModels.TabIndex = 13;
+            this.lstModels.UseCompatibleStateImageBehavior = false;
             // 
             // ModelsView
             // 
@@ -175,7 +176,7 @@ namespace UserInterface
             this.Controls.Add(this.btnDeleteModel);
             this.Controls.Add(this.pnlMaterial);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lstMaterials);
+            this.Controls.Add(this.lstModels);
             this.Controls.Add(this.btnCreateModel);
             this.Name = "ModelsView";
             this.Size = new System.Drawing.Size(504, 447);
@@ -197,7 +198,7 @@ namespace UserInterface
         private System.Windows.Forms.Button btnCreateModel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView lstMaterials;
+        private System.Windows.Forms.ListView lstModels;
         private System.Windows.Forms.CheckBox checkBoxPreview;
     }
 }

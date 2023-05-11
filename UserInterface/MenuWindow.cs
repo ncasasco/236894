@@ -34,21 +34,21 @@ namespace UserInterface
         private void btnFigures_Click(object sender, EventArgs e)
         {
             mainPanel.Controls.Clear();
-            UserControl figures = new FiguresView();
+            UserControl figures = new FiguresView(userList, credentials);
             mainPanel.Controls.Add(figures);
         }
 
         private void btnMaterials_Click(object sender, EventArgs e)
         {
             mainPanel.Controls.Clear();
-            UserControl materials = new MaterialsView();
+            UserControl materials = new MaterialsView(userList, credentials);
             mainPanel.Controls.Add(materials);
         }
 
         private void btnModels_Click(object sender, EventArgs e)
         {
             mainPanel.Controls.Clear();
-            UserControl models = new ModelsView();
+            UserControl models = new ModelsView(userList, credentials);
             mainPanel.Controls.Add(models);
         }
 
