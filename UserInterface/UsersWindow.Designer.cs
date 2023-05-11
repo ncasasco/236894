@@ -229,7 +229,7 @@ namespace UserInterface
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(423, 123);
             this.label12.TabIndex = 5;
-            this.label12.Text = "Welcome";
+            this.label12.Text = "3D Renderer";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelRegister

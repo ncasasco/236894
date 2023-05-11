@@ -11,6 +11,7 @@ namespace BusinessLogic
         private DateTime registrationDate;
         private IList<Figure> userFigures;
         private IList<Material> userMaterials;
+        private IList<Model> userModels;
 
         public const int UsernameMinLength = 3;
         public const int UsernameMaxLength = 20;
@@ -64,6 +65,15 @@ namespace BusinessLogic
             set
             {
                 userMaterials = value;
+            }
+        }
+
+        public IList<Model> UserModels
+        {
+            get => userModels;
+            set
+            {
+                userModels = value;
             }
         }
 

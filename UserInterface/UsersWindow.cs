@@ -28,8 +28,8 @@ namespace UserInterface
             {
                 credentialsAux = new Credentials();
                 User admin = new User();
-                admin.Username = "nicolas";
-                admin.Password = "Password9";
+                admin.Username = "nico";
+                admin.Password = "Contra9";
                 credentialsHandler = new CredentialsManager(userList, admin);
             }
         }
