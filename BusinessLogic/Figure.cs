@@ -27,7 +27,10 @@ namespace BusinessLogic
 
             set
             {
-                name = value;
+                if (value?.Length <= 0)
+                    throw new BusinessLogicException($"Name should not be empty");
+                else
+                    name = value;
             }
         }
 

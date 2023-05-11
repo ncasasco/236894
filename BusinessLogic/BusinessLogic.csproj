@@ -47,6 +47,8 @@
     <Compile Include="CredentialsManager.cs" />
     <Compile Include="Figure.cs" />
     <Compile Include="FigureRepo.cs" />
+    <Compile Include="Material.cs" />
+    <Compile Include="MaterialRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserRepo.cs" />

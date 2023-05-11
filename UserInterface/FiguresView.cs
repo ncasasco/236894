@@ -22,6 +22,7 @@ namespace UserInterface
             InitializeComponent();
             userList = newUserList;
             credentials = newCredentials;
+            figureList = new FigureRepo();
         }
 
         private void button1_Click(object sender, EventArgs e)

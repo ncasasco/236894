@@ -49,9 +49,9 @@ namespace UserInterface
             // btnDeleteMaterial
             // 
             this.btnDeleteMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteMaterial.Location = new System.Drawing.Point(311, 273);
+            this.btnDeleteMaterial.Location = new System.Drawing.Point(274, 273);
             this.btnDeleteMaterial.Name = "btnDeleteMaterial";
-            this.btnDeleteMaterial.Size = new System.Drawing.Size(146, 35);
+            this.btnDeleteMaterial.Size = new System.Drawing.Size(183, 35);
             this.btnDeleteMaterial.TabIndex = 12;
             this.btnDeleteMaterial.Text = "Delete Material";
             this.btnDeleteMaterial.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@ namespace UserInterface
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(-4, 80);
+            this.label6.Location = new System.Drawing.Point(3, 80);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(28, 24);
             this.label6.TabIndex = 11;
@@ -115,7 +115,7 @@ namespace UserInterface
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(67, 80);
+            this.label4.Location = new System.Drawing.Point(65, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 24);
             this.label4.TabIndex = 7;
@@ -123,7 +123,7 @@ namespace UserInterface
             // 
             // txtRedMaterial
             // 
-            this.txtRedMaterial.Location = new System.Drawing.Point(21, 82);
+            this.txtRedMaterial.Location = new System.Drawing.Point(25, 82);
             this.txtRedMaterial.Name = "txtRedMaterial";
             this.txtRedMaterial.Size = new System.Drawing.Size(36, 22);
             this.txtRedMaterial.TabIndex = 6;
@@ -181,12 +181,16 @@ namespace UserInterface
             // 
             // lstMaterials
             // 
+            this.lstMaterials.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstMaterials.FullRowSelect = true;
+            this.lstMaterials.GridLines = true;
             this.lstMaterials.HideSelection = false;
             this.lstMaterials.Location = new System.Drawing.Point(37, 70);
             this.lstMaterials.Name = "lstMaterials";
             this.lstMaterials.Size = new System.Drawing.Size(430, 191);
             this.lstMaterials.TabIndex = 9;
             this.lstMaterials.UseCompatibleStateImageBehavior = false;
+            this.lstMaterials.View = System.Windows.Forms.View.Tile;
             // 
             // MaterialsView
             // 

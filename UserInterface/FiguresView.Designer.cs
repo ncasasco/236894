@@ -39,18 +39,27 @@ namespace UserInterface
             this.txtFigureName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRadius = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlFigureList.SuspendLayout();
             this.pnlFigure.SuspendLayout();
             this.SuspendLayout();
             // 
             // lstFigures
             // 
+            this.lstFigures.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colName,
+            this.colRadius});
+            this.lstFigures.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstFigures.FullRowSelect = true;
+            this.lstFigures.GridLines = true;
             this.lstFigures.HideSelection = false;
             this.lstFigures.Location = new System.Drawing.Point(36, 68);
             this.lstFigures.Name = "lstFigures";
             this.lstFigures.Size = new System.Drawing.Size(430, 191);
             this.lstFigures.TabIndex = 0;
             this.lstFigures.UseCompatibleStateImageBehavior = false;
+            this.lstFigures.View = System.Windows.Forms.View.Tile;
             // 
             // label1
             // 
@@ -88,9 +97,9 @@ namespace UserInterface
             // btnDeleteFigure
             // 
             this.btnDeleteFigure.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteFigure.Location = new System.Drawing.Point(310, 271);
+            this.btnDeleteFigure.Location = new System.Drawing.Point(273, 271);
             this.btnDeleteFigure.Name = "btnDeleteFigure";
-            this.btnDeleteFigure.Size = new System.Drawing.Size(146, 35);
+            this.btnDeleteFigure.Size = new System.Drawing.Size(183, 35);
             this.btnDeleteFigure.TabIndex = 8;
             this.btnDeleteFigure.Text = "Delete Figure";
             this.btnDeleteFigure.UseVisualStyleBackColor = true;
@@ -144,6 +153,14 @@ namespace UserInterface
             this.label2.TabIndex = 3;
             this.label2.Text = "Name";
             // 
+            // colName
+            // 
+            this.colName.Text = "Name";
+            // 
+            // colRadius
+            // 
+            this.colRadius.Text = "Radius";
+            // 
             // FiguresView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -172,5 +189,7 @@ namespace UserInterface
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlFigure;
         private System.Windows.Forms.Button btnDeleteFigure;
+        private System.Windows.Forms.ColumnHeader colName;
+        private System.Windows.Forms.ColumnHeader colRadius;
     }
 }
