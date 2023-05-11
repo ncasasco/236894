@@ -31,14 +31,14 @@ namespace BusinessLogic
 
         public bool Exists(string text)
         {
-            return Users.Any(user => user.Username == text || user.Username == text);
+            return Users.Any(user => user.Username == text);
         }
 
         public User Get(string text)
         {
             if (!Exists(text))
                 throw new BusinessLogicException("User does not exist");
-            return Users.First(user => user.Username == text || user.Username == text);
+            return Users.First(user => user.Username == text);
         }
 
         public void Update(User user)
@@ -47,9 +47,9 @@ namespace BusinessLogic
             Add(user);
         }
 
-        public void Remove(string mail)
+        public void Remove(string username)
         {
-            Users = Users.Where(user => user.Username != mail).ToList();
+            Users = Users.Where(user => user.Username != username).ToList();
         }
 
         public IList<User> GetAll()

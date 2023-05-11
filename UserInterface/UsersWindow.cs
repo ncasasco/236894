@@ -13,11 +13,25 @@ namespace UserInterface
 {
     public partial class UsersWindow : Form
     {
+        public static UserRepo userList;
+        public static Credentials credentialsAux;
+        public static CredentialsManager credentialsHandler;
         public UsersWindow()
         {
             InitializeComponent();
             panelLogin.Show();
             panelRegister.Hide();
+
+            if (userList == null)
+                userList = new UserRepo();
+            if (credentialsAux == null)
+            {
+                credentialsAux = new Credentials();
+                User admin = new User();
+                admin.Username = "nicolas";
+                admin.Password = "Password9";
+                credentialsHandler = new CredentialsManager(userList, admin);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,6 +45,7 @@ namespace UserInterface
                 newUser.RegistrationDate = DateTime.Now;
                 if (textBoxPassword.Text == textBoxConfirm.Text)
                 {
+                    credentialsHandler = new CredentialsManager(userList, newUser);
                     MessageBox.Show("User created", "Welcome!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     panelLogin.Show();
@@ -80,16 +95,18 @@ namespace UserInterface
                 {
                     label9.Show();
                 }
-                else if (textBoxPasswordLogin.Text == "")
+                if (textBoxPasswordLogin.Text == "")
                 {
                     label10.Show();
                 }
-                else
-                {
-                    this.Hide();
-                    MenuWindow newWindow = new MenuWindow();
-                    newWindow.Show();
-                }
+                credentialsAux.Username = textBoxUserLogin.Text;
+                credentialsAux.Password = textBoxPasswordLogin.Text;
+                credentialsHandler.Login(credentialsAux);
+
+                this.Hide();
+                MenuWindow newWindow = new MenuWindow();
+                newWindow.Show();
+
             }
             catch (BusinessLogicException exc)
             {

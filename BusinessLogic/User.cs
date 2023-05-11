@@ -52,8 +52,8 @@ namespace BusinessLogic
         {
             return new User()
             {
-                password = this.Password,
                 username = this.Username,
+                password = this.Password,
                 registrationDate = this.RegistrationDate,
             };
         }
