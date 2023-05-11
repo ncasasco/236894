@@ -48,9 +48,9 @@ namespace UserInterface
             // cmbModelMaterial
             // 
             cmbModelMaterial.FormattingEnabled = true;
-            cmbModelMaterial.Location = new System.Drawing.Point(4, 144);
+            cmbModelMaterial.Location = new System.Drawing.Point(0, 143);
             cmbModelMaterial.Name = "cmbModelMaterial";
-            cmbModelMaterial.Size = new System.Drawing.Size(202, 24);
+            cmbModelMaterial.Size = new System.Drawing.Size(206, 24);
             cmbModelMaterial.TabIndex = 14;
             // 
             // btnDeleteModel
@@ -80,11 +80,11 @@ namespace UserInterface
             // checkBoxPreview
             // 
             this.checkBoxPreview.AutoSize = true;
-            this.checkBoxPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxPreview.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.checkBoxPreview.Location = new System.Drawing.Point(10, 178);
             this.checkBoxPreview.Name = "checkBoxPreview";
-            this.checkBoxPreview.Size = new System.Drawing.Size(226, 33);
+            this.checkBoxPreview.Size = new System.Drawing.Size(181, 28);
             this.checkBoxPreview.TabIndex = 15;
             this.checkBoxPreview.Text = "Generate preview";
             this.checkBoxPreview.UseVisualStyleBackColor = true;
@@ -142,7 +142,7 @@ namespace UserInterface
             this.btnCreateModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateModel.Location = new System.Drawing.Point(321, 400);
             this.btnCreateModel.Name = "btnCreateModel";
-            this.btnCreateModel.Size = new System.Drawing.Size(167, 30);
+            this.btnCreateModel.Size = new System.Drawing.Size(146, 30);
             this.btnCreateModel.TabIndex = 2;
             this.btnCreateModel.Text = "Create Model";
             this.btnCreateModel.UseVisualStyleBackColor = true;

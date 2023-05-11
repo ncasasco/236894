@@ -1,5 +1,6 @@
 ﻿//using BusinessLogic.Exceptions;
 using System;
+using System.Collections.Generic;
 
 namespace BusinessLogic
 {
@@ -8,6 +9,8 @@ namespace BusinessLogic
         private string username;
         private string password;
         private DateTime registrationDate;
+        private IList<Figure> userFigures;
+        private IList<Material> userMaterials;
 
         public const int UsernameMinLength = 3;
         public const int UsernameMaxLength = 20;
@@ -43,6 +46,24 @@ namespace BusinessLogic
             set
             {
                 registrationDate = value;
+            }
+        }
+
+        public IList<Figure> UserFigures
+        {
+            get => userFigures;
+            set
+            {
+                userFigures = value;
+            }
+        }
+
+        public IList<Material> UserMaterials
+        {
+            get => userMaterials;
+            set
+            {
+                userMaterials = value;
             }
         }
 
