@@ -62,6 +62,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FiguresView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FiguresView.Designer.cs">
+      <DependentUpon>FiguresView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialsView.Designer.cs">
+      <DependentUpon>MaterialsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelsView.Designer.cs">
+      <DependentUpon>ModelsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScenesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScenesView.Designer.cs">
+      <DependentUpon>ScenesView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsersWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,8 +100,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FiguresView.resx">
+      <DependentUpon>FiguresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialsView.resx">
+      <DependentUpon>MaterialsView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuWindow.resx">
       <DependentUpon>MenuWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelsView.resx">
+      <DependentUpon>ModelsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,6 +122,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ScenesView.resx">
+      <DependentUpon>ScenesView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsersWindow.resx">
       <DependentUpon>UsersWindow.cs</DependentUpon>
     </EmbeddedResource>

@@ -340,8 +340,8 @@ namespace UserInterface
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(419, 373);
-            this.Controls.Add(this.panelRegister);
             this.Controls.Add(this.panelLogin);
+            this.Controls.Add(this.panelRegister);
             this.Location = new System.Drawing.Point(19, 206);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UsersWindow";

@@ -104,7 +104,7 @@ namespace UserInterface
                 credentialsHandler.Login(credentialsAux);
 
                 this.Hide();
-                MenuWindow newWindow = new MenuWindow();
+                MenuWindow newWindow = new MenuWindow(userList, credentialsHandler);
                 newWindow.Show();
 
             }
